@@ -1,0 +1,21 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended"],
+  "plugins": [
+    "@typescript-eslint",
+    "tailwindcss",
+    "simple-import-sort",
+    "unused-imports"
+  ],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
+  },
+  "settings": { "next": { "rootDir": true } }
+}
