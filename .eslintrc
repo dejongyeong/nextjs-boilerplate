@@ -29,6 +29,10 @@
         "plugin:testing-library/react",
         "plugin:jest-dom/recommended"
       ]
+    },
+    {
+      "files": ["**/*.spec.ts"],
+      "extends": ["plugin:playwright/recommended"]
     }
   ]
 }
