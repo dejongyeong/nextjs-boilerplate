@@ -67,5 +67,6 @@
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
-  }
+  },
+  "author": "DJ (https://github.com/dejongyeong)"
 }
