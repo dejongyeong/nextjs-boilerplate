@@ -1,3 +1,4 @@
+import percySnapshot from "@percy/playwright";
 import { expect, test } from "@playwright/test";
 
 test("has title", async ({ page }) => {
@@ -5,6 +6,8 @@ test("has title", async ({ page }) => {
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
+
+  await percySnapshot(page, "Homepage");
 });
 
 test("get started link", async ({ page }) => {
