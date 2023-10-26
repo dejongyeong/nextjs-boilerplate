@@ -24,6 +24,9 @@ export default defineConfig({
   // Opt out of parallel tests on CI.
   workers: process.env.CI ? 1 : undefined,
 
+  // Limit the number of failures on CI to save resources
+  maxFailures: process.env.CI ? 10 : undefined,
+
   // Reporter to use. See https://playwright.dev/docs/test-reporters
   reporter: process.env.CI ? "github" : "list",
 
