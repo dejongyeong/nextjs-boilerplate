@@ -34,7 +34,6 @@
     "@typescript-eslint/parser": "^6.9.0",
     "autoprefixer": "^10",
     "commitizen": "^4.3.0",
-    "crossenv": "^0.0.2-security",
     "dotenv": "^16.3.1",
     "eslint": "^8",
     "eslint-config-next": "13.5.6",
