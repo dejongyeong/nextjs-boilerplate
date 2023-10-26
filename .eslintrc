@@ -17,5 +17,18 @@
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
   },
-  "settings": { "next": { "rootDir": true } }
+  "settings": { "next": { "rootDir": true } },
+  "overrides": [
+    // Configuration for Jest
+    {
+      "files": ["**/*.test.ts", "**/*.test.tsx"],
+      "plugins": ["jest", "jest-formatting", "testing-library", "jest-dom"],
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest-formatting/recommended",
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended"
+      ]
+    }
+  ]
 }
