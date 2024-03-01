@@ -23,8 +23,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: npm ci
-      - run: npx next build
+      - run: cp .env.example .env
+      - run: npm install
+      - run: npm run build --if-present
 
   test:
     strategy:
@@ -44,7 +45,7 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
           cache: "npm"
-      - run: npm ci
+      - run: npm install
 
       - if: github.event_name == 'pull_request'
         name: Validate all commits from PR
