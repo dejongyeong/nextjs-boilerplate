@@ -9,7 +9,9 @@ const bundleAnalyzer = withBundleAnalyzer({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {},
+  experimental: {
+    webpackBuildWorker: true,
+  },
 };
 
 export default bundleAnalyzer(nextConfig);
