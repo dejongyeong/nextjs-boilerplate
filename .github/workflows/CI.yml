@@ -49,7 +49,13 @@ jobs:
 
       - if: github.event_name == 'push'
         name: Validate current commit (last commit)
-        run: npx commitlint --from HEAD~1 --to HEAD --verbose
+        run: |
+          if ["$(git rev-list --count HEAD)" -eq 1]; then
+            echo "This is initial commit"
+            npx commitlint --verbose
+          else
+            npx commitlint --last --verbose
+          fi
 
       - if: github.event_name == 'pull_request'
         name: Validate all commits from PR
