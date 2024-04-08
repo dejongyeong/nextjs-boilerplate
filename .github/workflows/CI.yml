@@ -52,7 +52,7 @@ jobs:
         run: |
           if ["$(git rev-list --count HEAD)" -eq 1]; then
             echo "This is initial commit"
-            npx commitlint --verbose
+            git commit --amend -m "feat: initial commit"
           else
             npx commitlint --last --verbose
           fi
