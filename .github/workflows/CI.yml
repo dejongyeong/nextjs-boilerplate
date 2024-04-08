@@ -53,7 +53,7 @@ jobs:
 
       - if: github.event_name == 'push'
         name: Validate current commit (last commit)
-        run: npx commitlint --from HEAD~1 --to HEAD --verbose
+        run: npx commitlint --last --verbose
 
       - name: Linter
         run: npm run lint
